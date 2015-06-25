@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head> 
+<link rel="stylesheet" href="webjars/bootstrap/3.3.2/css/bootstrap.min.css"/>
+
+ <!-- <link href="cover.css" rel="stylesheet"/> -->  
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+ <div class="masthead clearfix">
+            <div class="inner">
+              
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li ><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li class="active"><a th:href="@{/contact}">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+    <h1>Form</h1>
+    <form action="#" th:action="@{/contact}" th:object="${contact}" method="post">
+    	<p>Name: <input type="text" th:field="*{name}" /></p>
+    	<p>Phone: <input type="text" th:field="*{phone}" /></p>
+    	<p>Email <input type="text" th:field="*{email}" /></p>
+        <p>Message: <input type="text" th:field="*{Message}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+    
+</body>
+</html>
