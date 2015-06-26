@@ -10,6 +10,12 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 
+<profiles><profile>
+      <id>pom</id>
+      <activation>
+      </activation>
+    </profile></profiles>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
